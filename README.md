@@ -66,6 +66,38 @@ En esta imagen podemos ver como se creo el contenedor en la aplicacion, el punto
 ```bash
 docker exec -it dam_alp1 sh
 ```
+---
+
+## 4. Comprobar la IP y conectividad.
+
+#### Primero utilizamos el comando de antes para entrar en el contenedor ya creado: *dam_alp1*
+
+```bash
+docker exec -it dam_alp1 sh
+```
+#### A continuacion utilizamos el comando **ip addr** para comprobar la ip del contenedor.
+
+```bash
+ip addr
+```
+Nos devuelve muchos apartados, pero el más importante es el ultimo que nos dice la ip
+
+<img width="790" height="119" alt="image" src="https://github.com/user-attachments/assets/b42433eb-4386-4805-8d31-7acaca2e14c2" />
+
+En este caso la IP es : ***172.17.0.2/16***
+
+#### Para comprobar la conexion con google.com utilizamos el siguiente comando:
+
+```bash
+ping -c 3 google.com
+```
+
+`-c 3` indica que solo se enviarán 3 paquetes y luego el comando se detendrá.
+
+<img width="527" height="226" alt="image" src="https://github.com/user-attachments/assets/f8196a6e-64e5-4c43-b936-d48302ddb26a" />
+
+Como se puede ver en la imagen la conecxion se realizo correctamente
+
 
 
 
