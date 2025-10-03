@@ -45,7 +45,27 @@ Como podemos ver en esta imagen:
 * El nombre que se le asigno al contenedor es:  **zealous_meninsky**
 * Como podemos ver en el apartado status, el contenedor no esta arrancado
 
+---
 
+## 3. Crear un contenedor con el nombre `dam_alp1`. 
+
+#### Con el siguiente comando creamos el contenedor dam_alp1 y lo iniciamos directamente, ademas ya estamos dentro de el.
+
+```bash
+docker run -it --name dam_alp1 alpine
+```
+
+<img width="873" height="147" alt="image" src="https://github.com/user-attachments/assets/d69b45ca-9d88-4634-9ec6-c9fc32d87e87" />
+
+En esta imagen podemos ver como se creo el contenedor en la aplicacion, el punto de color verde quiere decir que el contenedor se esta corriendo. Ademas el, "/ #" en la terminal quiere decir que nos encontramos dentro del contenedor.
+
+#### Si el contenedor esta corriendo, puedes entrar con el siguiente comando.
+
+<img width="873" height="147" alt="image" src="https://github.com/user-attachments/assets/b9a80823-22d0-4b39-9bc8-4f2c8239b2da" />
+
+```bash
+docker exec -it dam_alp1 sh
+```
 
 
 
