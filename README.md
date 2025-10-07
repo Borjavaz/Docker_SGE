@@ -163,6 +163,21 @@ docker ps -a
 
 Como podemos ver en la captura los contenedores siguen acticos desde hace 10 y 5 minutos.
 
+---
+
+## 7 Comprobar espacio en el disco
+
+#### Ejecutamos este comando
+
+```bash
+docker system df
+```
+
+##### Muestra el espacio en disco usado por imágenes, contenedores...
+
+<img width="771" height="560" alt="image" src="https://github.com/user-attachments/assets/b7ccad14-5635-43a3-b515-b32ff4011b7f" />
+
+Como se puede ver en la captura hay 2 imagenes y 2 estan activas ocupando ***12.94MB***, en cuanto a los contenedores se puede ver que hay 4 pero solo 2 estan activos ocupando ***32.77Kb***.
 
 
 
