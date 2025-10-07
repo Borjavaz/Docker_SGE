@@ -179,5 +179,23 @@ docker system df
 
 Como se puede ver en la captura hay 2 imagenes y 2 estan activas ocupando ***12.94MB***, en cuanto a los contenedores se puede ver que hay 4 pero solo 2 estan activos ocupando ***32.77Kb***.
 
+---
+
+## 8 Comprobar uso de memoria RAM
+
+#### Ejecutamos este comando
+
+```bash
+docker stats
+```
+
+<img width="982" height="433" alt="image" src="https://github.com/user-attachments/assets/b4c02a5e-b3be-441b-bf72-2d0ca439ffeb" />
+
+
+Este comando muestra en tiempo real el consumo de CPU, memoria RAM y red de cada contenedor.
+
+
+
+
 
 
