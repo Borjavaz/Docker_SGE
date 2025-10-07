@@ -98,6 +98,71 @@ ping -c 3 google.com
 
 Como se puede ver en la imagen la conecxion se realizo correctamente
 
+---
+
+## 5. Creacion del contenedor dam_alp2
+
+#### Con este comando creamos el contenedor:
+
+```bash
+docker run -it --name dam_alp2 alpine
+```
+
+<img width="805" height="151" alt="image" src="https://github.com/user-attachments/assets/244c6290-87ea-4066-aa49-17daedbc95d4" />
+
+`-it` sirve para crear el contenedor e iniciarlo.Como se puede ver en la captura esta iniciado.
+
+#### Comando para entrar en el contenedor cuando ya esta iniciado
+
+```bash
+docker exec -it dam_alp2 sh
+```
+
+<img width="796" height="143" alt="image" src="https://github.com/user-attachments/assets/5b53c51f-945c-4fec-a7c2-fdfe9789d1b1" />
+
+## 5.1 Hacer ping entre dos contenedores
+
+## Primero verificamos la IP de uno de los contenedores, en este caso de dam_alp1 con el siguiente comando:
+
+```bash
+docker exec dam_alp1 ip addr
+```
+
+<img width="809" height="399" alt="image" src="https://github.com/user-attachments/assets/25177012-e3fd-448e-8790-667ca5a06b99" />
+
+Como se puede ver en la captur ala IP es: ***172.17.0.3***
+
+## Ahora nos metemos en el otro contenedor y hacemos ping con este comando:
+
+```bash
+ping -c 3 172.17.0.3
+```
+
+<img width="814" height="476" alt="image" src="https://github.com/user-attachments/assets/0e483665-050c-4c53-8be2-5f1ada84af85" />
+
+Como se puede ver en la captura si que se puede hacer ping entre los contenedores siempre que esten los dos activos.
+
+---
+
+## 6. Salir del terminal
+
+## Para salir del termilan utilizamos el comando:
+
+```bash
+exit
+```
+<img width="803" height="304" alt="image" src="https://github.com/user-attachments/assets/8841d19c-8cde-4e0e-b7eb-9e0158ea4b87" />
+
+Para saber el estado de los contenedores utilizamos el comando:
+
+```bash
+docker ps -a
+```
+
+<img width="996" height="415" alt="image" src="https://github.com/user-attachments/assets/601b0492-2bd0-4158-9651-23ac51745f77" />
+
+Como podemos ver en la captura los contenedores siguen acticos desde hace 10 y 5 minutos.
+
 
 
 
